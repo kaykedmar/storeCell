@@ -1,5 +1,9 @@
 import React from 'react';
 
+// Importando Icons
+import { FaSearch } from 'react-icons/fa';
+
+
 function SearchBar() {
   return (
     <form>
@@ -11,11 +15,10 @@ function SearchBar() {
       />
 
       <button type="submit" className="search__button">
-        icone
+        <FaSearch  />
       </button>
     </form>
   );
 }
 
 export default SearchBar;
-

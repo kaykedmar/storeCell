@@ -1,0 +1,6 @@
+.header { 
+  background-color: #fff159;
+
+  /* Caso a tela role pra baixo, vai esta fixado */
+  position: fixed;
+}
