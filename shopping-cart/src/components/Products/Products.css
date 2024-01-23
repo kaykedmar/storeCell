@@ -1,0 +1,17 @@
+.products { 
+  padding: 120px 20px 50px;
+
+  /* Criando colunas */
+  display: grid;
+
+  /*
+     Auto-fill e Auto-complete 
+     minmax = Altura minima e altura maxima
+  */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+
+  /* Centralizando */
+  justify-content: center;
+}
+

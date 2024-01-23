@@ -1,0 +1,35 @@
+/* Icone do carrinho de compras */
+.cart__button { 
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: 20px;
+  color: #333;
+  
+
+  position: relative;
+}
+
+
+/* Bolinha que vai receber a quantidade de itens no carrinho */
+.cart-status { 
+  background-color: red;
+  width: 15px;
+  height: 15px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-size: 11px ;
+  font-weight: 600;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

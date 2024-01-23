@@ -1,15 +1,18 @@
 import React from 'react';
-import SearchBar from '../SearchBar/SearchBar';  
+import SearchBar from '../SearchBar/SearchBar';
+import CartButton from '../CartButton/CartButton';
 
-// Estilos 
-import Header from './Header.css';
-
+// Estilos
+import './Header.css';
 
 function Header() {
   return (
     <header className="header">
       <div className="container">
+        
         <SearchBar />
+        <CartButton />
+
       </div>
     </header>
   );
