@@ -17,7 +17,7 @@ function Products() {
 
   useEffect(() => {
 
-    fetchProducts('iphone').then((response) => {
+    fetchProducts('pc').then((response) => {
 
       // Salvando os dados no array.
       setProducts(response);
@@ -29,7 +29,7 @@ function Products() {
   return ( 
     <section className="products container">
       {
-        products.map((product) => <ProductCard key={product.id} data={ product} />)
+        products.map((product) => <ProductCard key={product.id} data={ product } />)
       }
     </section>
   ); 

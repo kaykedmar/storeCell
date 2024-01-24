@@ -15,6 +15,7 @@ function ProductCard({ data }) {
     <section className="product-card">
       
       <img 
+      // qualquer palavra antes de .jpg vai mudar pra W.jpg.
         src={thumbnail.replace(/\w\.jpg/gi, 'W.jpg')} 
         alt="product" className="card__image"/>
 
