@@ -7,6 +7,7 @@ import { FaCartPlus } from 'react-icons/fa6';
 // Estilazação.
 import './ProductCard.css'; 
 
+
 function ProductCard({ data }) {
 
   const {title, thumbnail, price } = data; 

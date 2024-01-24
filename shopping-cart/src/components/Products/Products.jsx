@@ -17,9 +17,10 @@ function Products() {
 
   useEffect(() => {
 
-    fetchProducts('pc').then((response) => {
+    // no fetchProduct tem um parametro "query" responsavel pela pesquisada.
+    fetchProducts('mesa').then((response) => {
 
-      // Salvando os dados no array.
+      // valor usado para atualizar o products.
       setProducts(response);
 
     });
@@ -29,6 +30,7 @@ function Products() {
   return ( 
     <section className="products container">
       {
+        // Mapeando cada produto do products, e renderizando um ProductCard para cada um deles 
         products.map((product) => <ProductCard key={product.id} data={ product } />)
       }
     </section>
