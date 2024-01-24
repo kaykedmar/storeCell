@@ -4,15 +4,33 @@ import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 import './SearchBar.css';
+import fetchProducts from '../../api/fetchProducts';
 
 function SearchBar() {
 
   // Estado para armazenar o valor digitado no campo de busca
   const [ searchValue, setSearchValue ] = useState(''); 
 
+  const handleSearch = async (event) => { 
+    // Previvendo do form atualizar a pagina.
+    event.preventDefault();
+
+
+    // fetchProducts função para busca.
+    const products = await fetchProducts(searchValue); 
+
+    // Atualizado o searchValue para uma string vazia.
+    setSearchValue('');
+
+
+    console.log(products);
+
+  }; 
+
+
   return (
     // Formulário de busca
-    <form className="search-bar">
+    <form className="search-bar" onSubmit={handleSearch}>
 
       {/* Campo de busca com evento onChange para rastrear alterações */}
       <input
