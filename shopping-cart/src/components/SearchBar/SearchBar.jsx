@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 // Importando Icons
 import { FaSearch } from 'react-icons/fa';
 
 import './SearchBar.css';
 import fetchProducts from '../../api/fetchProducts';
+import AppContext from '../../context/AppContext';
 
 function SearchBar() {
 
+  const { setProducts } = useContext(AppContext);
+
   // Estado para armazenar o valor digitado no campo de busca
   const [ searchValue, setSearchValue ] = useState(''); 
+
+
 
   const handleSearch = async (event) => { 
     // Previvendo do form atualizar a pagina.
@@ -19,11 +24,10 @@ function SearchBar() {
     // fetchProducts função para busca.
     const products = await fetchProducts(searchValue); 
 
+    setProducts(products);
+
     // Atualizado o searchValue para uma string vazia.
     setSearchValue('');
-
-
-    console.log(products);
 
   }; 
 
@@ -31,7 +35,7 @@ function SearchBar() {
   return (
     // Formulário de busca
     <form className="search-bar" onSubmit={handleSearch}>
-
+      {name}
       {/* Campo de busca com evento onChange para rastrear alterações */}
       <input
         type="search"
